@@ -1,0 +1,4 @@
+interface:
+  display_name: "小游戏 UI 切图"
+  short_description: "将效果图拆成去字底板、透明图标和独立文字，检查后打包交付可复用 PNG"
+  default_prompt: "使用 $game-ui-slicing 将这张效果图切成可复用的 PNG，文字数字与底图分离，生成预览和 ZIP，默认不导入 Unity。"
