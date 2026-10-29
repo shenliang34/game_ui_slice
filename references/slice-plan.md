@@ -23,10 +23,10 @@
 
 - `role: "background"`：允许不透明，其他素材默认应有透明像素。
 - `fixedSize: true`：固定组合图，不得同时指定非零 border。
-- `trim: true`：按已有 Alpha 裁去透明边；结果记录 trimOffset。同尺寸方块一般禁用。
+- `trim: true`：按已有 Alpha 裁去透明边；结果记录 trimOffset。独立素材默认开启，保证切图不留空白；仅同系列需统一尺寸的方块禁用并在 note 说明。
 - `roundRadius: 22`：已经人工测量的圆角蒙版，乘上已有 Alpha，不重绘内容。
 - `mask`：蒙版路径；尺寸应等于源层整图，使用相同 rect。L 图取亮度，RGBA 图取 Alpha。用于经核验的透明分离，不创造隐藏图像。
-- `padding: [left,top,right,bottom]`：加透明边；border 以加边后的最终图为准。
+- `padding: [left,top,right,bottom]`：加透明边；border 以加边后的最终图为准。默认不使用，仅在引擎或特效确有需要时添加并在 note 说明。
 - `allowOpaque: true`：确实需要不透明贴图时使用，并在 note 解释；不能默认绕过透明检查。
 
 脚本拒绝越界框、源尺寸不匹配、重复文件名、输出路径穿越、全透明素材、非背景全不透明素材及无效边框。已有非空输出目录会被保留并拒绝写入。打包成功不等于视觉审查通过。
